@@ -1,0 +1,163 @@
+body {
+  font-family: 'Merriweather', serif;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.business-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  background: #1d3557;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.logo-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #ffffff;
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card-header .tagline {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.card-body {
+  padding: 30px 25px;
+  background: #fff;
+  text-align: left;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.person {
+  flex: 1 1 45%;
+}
+
+.person h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: #1d3557;
+}
+
+.person p {
+  margin: 3px 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.contact i {
+  margin-right: 8px;
+  color: #1d3557;
+}
+
+.contact a {
+  color: #1d3557;
+  text-decoration: none;
+}
+
+.contact .email-link:hover,
+.contact .linkedin-link:hover {
+  text-decoration: underline;
+}
+
+.services h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #1d3557;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.85rem;
+}
+
+.services ul li::before {
+  content: "\f111";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #1d3557;
+  font-size: 0.5rem;
+  top: 8px;
+}
+
+/* Scroll fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .team {
+    flex-direction: column;
+  }
+
+  .person {
+    flex: 1 1 100%;
+  }
+}
